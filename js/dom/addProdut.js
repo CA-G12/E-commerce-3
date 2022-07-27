@@ -23,3 +23,4 @@ btn.addEventListener('click',function(e){
     document.querySelector('#category').value=""
     document.querySelector('#image').value=""
 })
+addItemTo('allProducts',obj)
