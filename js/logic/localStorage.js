@@ -23,8 +23,8 @@ function updateArr(arr, id, obj) {
 }
 
 function getItem(key) {
-  let arr = localStorage.getItem(key) || [];
-  arr = JSON.parse(arr);
+  let arr = localStorage.getItem(key);
+  arr = !arr ? [] : JSON.parse(arr);
   return arr;
 }
 function setItem(key, arr) {
