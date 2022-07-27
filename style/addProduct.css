@@ -67,3 +67,18 @@ textarea{
     border: 1px solid black;
     border-radius: 5px ;
 }
+
+.add-btn{
+    background-color: green;
+    font-size: 1.1rem;
+    width: 70px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 0px;
+    padding: 0.4rem;
+    align-self: center;
+}
+.add-btn:hover{
+    opacity: 0.8;
+}
