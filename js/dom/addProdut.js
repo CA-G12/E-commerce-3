@@ -8,19 +8,18 @@ btn.addEventListener('click',function(e){
     let obj={
     }
     e.preventDefault()
-    let inputs=form.querySelectorAll('input')
-    inputs.forEach(ele => {
-        obj.id = Date.now()
-        obj.name=ele.value 
-        obj.price=ele.value
-        obj.category=ele.value
-        obj.img=ele.value
 
-    });
-    console.log(addItemTo);
+    obj.id = Date.now()
+    obj.name = document.querySelector('#name').value
+    obj.price = document.querySelector('#price').value
+    obj.category = document.querySelector('#category').value
+    obj.img = document.querySelector('#image').value
+
+  /*   console.log(addItemTo);
     console.log(obj);
-    addItemTo('allProduct',obj);
-    inputs.forEach(ele =>{
-        ele.value=""
-    })
+     */
+    document.querySelector('#name').value=""
+    document.querySelector('#price').value=""
+    document.querySelector('#category').value=""
+    document.querySelector('#image').value=""
 })
