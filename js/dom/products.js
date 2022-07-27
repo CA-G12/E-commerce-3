@@ -1,4 +1,5 @@
-const products =  getItem('allProduct')
+const products =  getItem('allProduct') 
+console.log(products)
 const tableBody = document.querySelector('.table-body')
 
 function addToTable (obj,index) {
@@ -10,19 +11,26 @@ function addToTable (obj,index) {
     <td>${obj.category}</td>
     <td><img src="${obj.img}" alt="random"></td>
     <td class="td-btn"><button class="edit-btn table-btn" onClick = "editItem(${obj.id})">Edit</button></td>
-    <td class="td-btn"><button class="delete-btn table-btn" onClick = "deleteItem(${obj.id})>Delete</button></td>
+    <td class="td-btn"><button class="delete-btn table-btn" onClick = "deleteItem(${obj.id}")>Delete</button></td>
 </tr>
     `
 }
 function editItem(id){
-
+    setItem('editedItem',id)
+    window.location = "./editProduct.html"
 }
 function deleteItem(id){
-    
-}
-function renderData(){
+    removeItemFrom('allProducts',id)
+    tableBody.innerHTML = ''
     products.forEach((ele,index) => {
+        console.log(ele);
         addToTable(ele,index)
     })
+
+
 }
-renderData()
+products.forEach((ele,index) => {
+    console.log(ele);
+    addToTable(ele,index)
+})
+
