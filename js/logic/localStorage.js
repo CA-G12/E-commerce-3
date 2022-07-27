@@ -32,8 +32,10 @@ function setItem(key, arr) {
   localStorage.setItem(key, arr);
 }
 function addItemTo(key, obj) {
-  let arr = localStorage.getItem(key);
-  arr = JSON.parse(arr);
+
+
+  let arr = localStorage.getItem(key) ;
+  arr = !arr ? [] :  JSON.parse(arr) ;
   arr = addToArr(arr, obj);
   arr = JSON.stringify(arr);
   localStorage.setItem(key, arr);
