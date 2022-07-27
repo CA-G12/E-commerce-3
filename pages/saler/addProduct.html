@@ -38,7 +38,7 @@
     <main>
         <div class="main-container">
             <h2 class="add-product-title">Add product</h2>
-        <form action="">
+        <form action="" class="add-form">
             <div>
                 <label for="name">Product Name</label>
                 <input type="text" placeholder="Product Name" id="name">
@@ -56,12 +56,11 @@
                 <label for="image">Product Image</label>
                 <input type="text" placeholder="Product Image" id="image">
             </div>
-            <div>
-                <label for="description">Product Description</label>
-                <textarea placeholder="Product Category" id="description"></textarea>
-            </div>
+            <button class="add-btn" type="submit" name="submit"> Add  </button>
         </form>
         </div>
     </main>
+    <script src="./../../js/logic/localStorage.js"></script>
+    <script src="./../../js/dom/addProdut.js"></script>
 </body>
 </html>
