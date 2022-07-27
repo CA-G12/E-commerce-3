@@ -8,13 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="/style/cart.css" />
+    <link rel="stylesheet" href="/E-commerce-3/style/cart.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
       <nav class="navigation">
-        <img src="/images/logo.png" alt="logo for ecommerce" />
+        <img src="/E-commerce-3/images/logo.png" alt="logo for ecommerce" />
 
         <ul>
           <li>
@@ -59,7 +59,9 @@
               <!-- products container start -->
               <div class="product-container view-main">
                 <!-- products cards start  -->
-                <div class="view-wrap list-view" style="display:block;" >
+                <div class="view-wrap list-view" style="display:none;" >
+                  <!--
+
                   <div class="product-card view-item" id="#">
                     <div class="product-image">
                       <img src="https://picsum.photos/200" alt="product Image" />
@@ -117,12 +119,17 @@
                   </div>
         
         
+
+
+                  -->
                   </div>
                
         
         
-                  <div class="view-wrap grid-view" style="display:none;">
-                    <div class="product-card view-item" id="#">
+                  <div class="view-wrap grid-view" style="display:block;">
+
+                    <!--
+                       <div class="product-card view-item" id="#">
                       <div class="product-image">
                         <img src="https://picsum.photos/200" alt="product Image" />
                       </div>
@@ -135,7 +142,7 @@
                       </div>
             
             
-                      <button type="submit" class="add-cart">Remove from Cart</button>
+                      <button type="submit" class="remove-cart">Remove from Cart</button>
             
             
                     </div>
@@ -196,6 +203,10 @@
                     </div>
           
           
+
+
+                    -->
+                   
                     </div>
                  
         
@@ -212,10 +223,15 @@
             </div>
 
 
-           <div class="total-price">
-                <h2> Total Price: <span id="total-price">45453$</span></h2>
+           <div class="total-price" >
+                <h2> Total Price: <span id="total-price"></span></h2>
 
            </div>
     </main>
   </body>
+
+
+  <script src="/E-commerce-3/js/logic/localStorage.js"></script>
+  <script src="/E-commerce-3/js/logic/cart.js"></script>
+  <script src="/E-commerce-3/js/dom/cart.js"></script>
 </html>
