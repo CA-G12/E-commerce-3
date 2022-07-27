@@ -1,52 +1,59 @@
 
 const productContainer = document.querySelector(".product-container");
 const totalPrice = document.querySelector("#total-price");
+
 let cartItems = getItem('cart');
 
-
-if(cartItems.lenght >0 ){
+/*
+let cartItems = [{"id":1, "name":"book", "price":5, img:"https://picsum.photos/200"},
+                {"id":2, "name":"book2", "price":50, img:"https://picsum.photos/200"},
+                {"id":3, "name":"book2", "price":10, img:"https://picsum.photos/200"}];
+*/
+if(cartItems.length > 0 ){
     renderCards(cartItems);
     totalPrice.innerText = getTotalPrice(cartItems);
 }
-
-
-function renderCards(cartItems){
-
-const viewWrap = document.createElement("div");
-viewWrap.className = "grid-view view-wrap";
-
-cartItems.array.forEach(element => {
-    viewWrap.appendChild(creatProductCard());
-
-});
-
-productContainer.appendChild(viewWrap);
+else{
+    totalPrice.innerText = "There is no products in Your cart";
 }
 
 
-function creatProductCard(){
+
+function renderCards(cartItems){
+const viewWrap = document.createElement("div");
+viewWrap.className = "grid-view view-wrap";
+
+cartItems.forEach(element => {
+    viewWrap.appendChild(creatProductCard(element));
+    productContainer.appendChild(viewWrap);
+});
+
+}
+
+
+function creatProductCard(element){
 
     const productCard = document.createElement("div");
     productCard.className = "product-card view-item";
 
 
-    productCard.appendChild(createProductImg());
+    productCard.appendChild(createProductImg(element));
 
-    productCard.appendChild(createProductDetail());
+    productCard.appendChild(createProductDetail(element));
 
-    productCard.appendChild(createProductbtn());
+    productCard.appendChild(createProductbtn(element));
 
     return productCard;
 }
 
 
-function createProductImg(){
+function createProductImg(element){
 
     const productImgdiv= document.createElement("div");
     productImgdiv.className   = "product-image";
 
     const productImg =  document.createElement("img");
-    productImg.src = "https://picsum.photos/200";
+    productImg.src = element.img;
 
 
     productImgdiv.appendChild(productImg);
@@ -54,7 +61,7 @@ function createProductImg(){
 }
 
 
-function createProductDetail(){
+function createProductDetail(element){
 
     const productDetail = document.createElement("div");
     productDetail.className ="product-detail vi-right";
@@ -62,11 +69,11 @@ function createProductDetail(){
     
     const productName = document.createElement("p");
     productName.className = "product-name";
-    productName.innerText = "name";
+    productName.innerText = element.name;
     
     const productPrice = document.createElement("p");
     productName.className = "product-price";
-    productPrice.innerText = "454";
+    productPrice.innerText = element.price;
 
 
  
@@ -76,17 +83,18 @@ function createProductDetail(){
     return productDetail;
 }
 
-function createProductbtn(){
+function createProductbtn(element){
 
+    
     const removeBtn = document.createElement("button");
     removeBtn.className = "remove-cart";
 
     removeBtn.innerText = "Remove From Cart";
-
-
+    removeBtn.setAttribute('id',element.id);
     return removeBtn;
 
 
 }
 
 //renderCards();
+
