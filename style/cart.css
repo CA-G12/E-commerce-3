@@ -75,7 +75,6 @@ header{
 }
 
 .search{
-
     height: 50%;
     max-width: 350px;
     padding-left: 30px;
@@ -91,6 +90,140 @@ header{
     background-color: #c4c6d669;
   
 }
+
+
+
+main {
+
+    margin: 2rem;
+  }
+  .products-div{
+    width: 100%;
+  }
+  /* products container stayls  */
+  .product-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: all 1s;
+  }
+  /* product card stayls  */
+  .product-card {
+    padding: 0.7rem;
+   /* display: flex;
+    flex-direction: column;
+    justify-content: center;*/
+    box-shadow: 0.2rem 0.3rem 0.7rem gray;
+  }
+  .product-image {
+    text-align: center;
+    width: 14 rem;
+    height: 14rem;
+  }
+  .list-view .product-detail {
+    width: 14 rem;
+    height: auto;
+    text-align: left;
+    padding: 0.4rem;
+  
+  }
+  .product-card button {
+    align-self: center;
+    width: 12rem;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: rgb(116, 3, 3);
+    color: white;
+    border: 0;
+    font-size: 1rem;
+    transition: all 0.5s;
+  }
+  .product-card button:hover {
+    background-color: rgb(179, 27, 27);
+  }
+
+
+
+/**/
+
+.wrapper{
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .links{
+     margin-bottom: 25px;
+     background-color: #E7E8EE;
+     padding: 15px;
+     border-radius: 3px;
+     width: 100%;
+  }
+  
+  .links ul{
+     display: flex;
+     justify-content: center;
+  }
+  
+  .links ul li{
+     margin: 0 15px;
+     font-weight: 600;
+     font-size: 20px;
+     cursor: pointer;
+     letter-spacing: 3px;
+     color:#363B4E;
+     list-style: none;
+  }
+  
+  .links ul li:hover, .links ul li.active{
+    color:#41549e;
+  }
+  
+  
+  /**/
+  
+  .view-main{
+    /* background-color: #dadbe23f;*/
+    /* border-radius: 3px;*/
+     padding: 15px;
+  }
+  
+  .list-view .view-item{
+    /*  background-color: #dadbe23f;
+      border: 1px solid #d1d2d83f;*/
+      margin: 10px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+  }
+  
+  .list-view .view-item:last-child{
+      margin-bottom: 0;
+  }
+  
+  /**/
+  
+  
+  .grid-view .view-item{
+   
+    margin: 10px;
+    padding: 25px;
+    text-align: center;
+    display: inline-block;
+    
+  }
+  
+  
+  .grid-view .view-item .vi-left{
+    margin-bottom: 10px;
+    
+  }
+  
+  /**/
+  
 
 
 
