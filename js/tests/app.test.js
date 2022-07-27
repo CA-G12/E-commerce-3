@@ -1,4 +1,5 @@
-const { filterPrice } = require("../logic/app");
+
+const { filterPrice ,filterCat} = require("../logic/app");
 
 describe("test price filter function", () => {
   test("test 1", () => {
@@ -37,4 +38,28 @@ describe("test price filter function", () => {
       { name: "product5", price: 600 },
     ]);
   });
+  
+
+
+describe('filterCat Function', () => {
+	test('should return => mobile', () => {
+		const actual = filterCat("mobile",
+		[
+			{
+				id: 1,
+				category: 'mobile',
+				price: '520'
+			},
+			{
+				id: 2,
+				category: 'car',
+				price:'20000'
+			}]);
+		const expected = [{
+			id: 1,
+			category: 'mobile',
+			price: '520'
+		}];
+		expect(actual).toEqual(expected);
+	});
 });
