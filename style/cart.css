@@ -33,7 +33,7 @@ header{
 }
 
 .navigation img  { 
-   width: 10%;
+  width: 120px;
 }
 
 .navigation ul{
@@ -242,7 +242,7 @@ text-align: center;
     }
 
     .navigation img  { 
-        width: 15%;
+        width: 100px;
      }
 
      .navigation span{

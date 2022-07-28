@@ -45,8 +45,11 @@ button:hover {
  button a {
     text-decoration: none;
     color: white;
+    display: block;
+    width: 100%;
  }
- 
+
+
  text{
     font-family:'Poppins', sans-serif;
  }
