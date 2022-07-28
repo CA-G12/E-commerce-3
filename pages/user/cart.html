@@ -14,6 +14,7 @@
   <body>
     <header>
       <nav class="navigation">
+
         <a href="./../../index.html"><img src="../../images/logo.png" alt="logo for ecommerce"></a>
 
         <ul>
@@ -40,196 +41,24 @@
       </nav>
     </header>
 
+    <main id="shop">
+      <div class="products-div">
+        <!-- products container start -->
+        <div class="product-container view-main">
+          <!-- products cards start  -->
+          <div class="view-wrap list-view" style="display: none"></div>
 
-    <main>
-        <main id="shop">
+          <div class="view-wrap grid-view" style="display: block"></div>
 
-            <div class="products-div">
-      
-                <div class="wrapper">
-                  <div class="links">
-                      <ul>
-                        <li class="li-list" data-view="list-view"><i class="fa-solid fa-list-ul"></i>List view</li>
-                        <li class="li-grid"  data-view="grid-view" ><i class="fa fa-th-large" aria-hidden="true"></i>Grid view</li>
-                      </ul>
-                  </div>
-              </div>
-        
-        
-              <!-- products container start -->
-              <div class="product-container view-main">
-                <!-- products cards start  -->
-                <div class="view-wrap list-view" style="display:none;" >
-                  <!--
+          <!-- products cards ends  -->
+        </div>
+      </div>
 
-                  <div class="product-card view-item" id="#">
-                    <div class="product-image">
-                      <img src="https://picsum.photos/200" alt="product Image" />
-                    </div>
-          
-                    <div class="product-detail vi-right">
-          
-                      <p class="product-name">Product</p>
-                      <p class="product-price">100$</p>
-                      <button type="submit" class="add-cart">Remove from Cart</button>
-        
-                    </div>
-          
-          
-          
-          
-                  </div>
-        
-        
-                  <div class="product-card view-item" id="#">
-                    <div class="product-image">
-                      <img src="https://picsum.photos/200" alt="product Image" />
-                    </div>
-          
-                    <div class="product-detail vi-right">
-          
-                      <p class="product-name">Product</p>
-                      <p class="product-price">100$</p>
-                      <button type="submit" class="add-cart">Remove from Cart</button>
-        
-                    </div>
-          
-          
-          
-          
-                  </div>
-        
-        
-                  <div class="product-card view-item" id="#">
-                    <div class="product-image">
-                      <img src="https://picsum.photos/200" alt="product Image" />
-                    </div>
-          
-                    <div class="product-detail vi-right">
-          
-                      <p class="product-name">Product</p>
-                      <p class="product-price">100$</p>
-                      <button type="submit" class="add-cart">Remove from Cart</button>
-        
-                    </div>
-          
-          
-          
-          
-                  </div>
-        
-        
-
-
-                  -->
-                  </div>
-               
-        
-        
-                  <div class="view-wrap grid-view" style="display:block;">
-
-                    <!--
-                       <div class="product-card view-item" id="#">
-                      <div class="product-image">
-                        <img src="https://picsum.photos/200" alt="product Image" />
-                      </div>
-            
-                      <div class="product-detail vi-right">
-            
-                        <p class="product-name">Product</p>
-                        <p class="product-price">100$</p>
-            
-                      </div>
-            
-            
-                      <button type="submit" class="remove-cart">Remove from Cart</button>
-            
-            
-                    </div>
-        
-                    <div class="product-card view-item" id="#">
-                      <div class="product-image">
-                        <img src="https://picsum.photos/200" alt="product Image" />
-                      </div>
-            
-                      <div class="product-detail vi-right">
-            
-                        <p class="product-name">Product</p>
-                        <p class="product-price">100$</p>
-            
-                      </div>
-            
-            
-                      <button type="submit" class="add-cart">Remove from Cart</button>
-            
-            
-                    </div>
-        
-                    <div class="product-card view-item" id="#">
-                      <div class="product-image">
-                        <img src="https://picsum.photos/200" alt="product Image" />
-                      </div>
-            
-                      <div class="product-detail vi-right">
-            
-                        <p class="product-name">Product</p>
-                        <p class="product-price">100$</p>
-            
-                      </div>
-            
-            
-                      <button type="submit" class="add-cart">Remove from Cart</button>
-            
-            
-                    </div>
-          
-          
-                    <div class="product-card view-item" id="#">
-                      <div class="product-image">
-                        <img src="https://picsum.photos/200" alt="product Image" />
-                      </div>
-            
-                      <div class="product-detail vi-right">
-            
-                        <p class="product-name">Product</p>
-                        <p class="product-price">100$</p>
-            
-                      </div>
-            
-            
-                      <button type="submit" class="add-cart">Remove from Cart</button>
-            
-            
-                    </div>
-          
-          
-
-
-                    -->
-                   
-                    </div>
-                 
-        
-        
-                
-      
-            
-           
-              <!-- products cards ends  -->
-            </div>
-
-
-
-            </div>
-
-
-           <div class="total-price" >
-                <h2> Total Price: <span id="total-price"></span></h2>
-
-           </div>
+      <div class="total-price">
+        <h2>Total Price: <span id="total-price"></span></h2>
+      </div>
     </main>
   </body>
-
 
   <script src="/E-commerce-3/js/logic/localStorage.js"></script>
   <script src="/E-commerce-3/js/logic/cart.js"></script>
