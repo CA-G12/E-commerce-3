@@ -68,4 +68,4 @@ let products = [
   },
 ];
 setItem("categries", categories);
-setItem("allProducts", products);
+setItem("allProduct", products);
